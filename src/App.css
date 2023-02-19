@@ -36,3 +36,54 @@
     transform: rotate(360deg);
   }
 }
+
+.comment-entry-area {
+  margin-top: 2%;
+  border-color: black;
+  border-width: 3px;
+  width: 40%;
+}
+
+.voting-button {
+  color: rgb(214, 254, 255);
+  background-color: #000c24;
+  border-radius: 5px;
+  padding-top: .5%;
+  padding-bottom: .5%;
+  font-family: Courier, monospace;
+  font-size: 110%;
+  border-color: aliceblue;
+  box-shadow: rgba(214, 254, 255, .5);
+}
+
+.vote-section {
+  background-color: rgb(214, 254, 255);
+  border-radius: 10px;
+}
+
+.red-text {
+  color: rgb(255, 30, 30);
+}
+
+.green-text {
+  color: rgb(47, 225, 12)
+}
+
+.orange-text {
+  color: rgb(255, 167, 59);
+}
+
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.d-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-center-w {
+  margin-left: auto;
+  margin-right: auto;
+}
