@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp, faThumbsDown, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 function AddCommentBar() {
-    const loggedIn = true;
+    const loggedIn = false;
     var likeCount = 2550;
     var dislikeCount = 1000;
     var userLiked = false;
@@ -42,7 +42,20 @@ function AddCommentBar() {
             </form>
         </section>
     ) : (
-        <section id="comment-add-section"></section>
+        <section id="comment-add-section">
+                        <div className="d-flex-row j-content mg-top-1">
+                <section id="liking-section" className="vote-section">
+                        <FontAwesomeIcon icon={faThumbsUp} className="green-text not-logged-in-like" aria-hidden="true"/>
+                    <div id="like-count" aria-labelledby={`This post has ${likeCount} likes`} 
+                        className="vote-count-num">{likeCount} Likes</div>
+                </section>
+                <section id="disliking-section" className="vote-section">
+                    <FontAwesomeIcon icon={faThumbsDown} className="red-text not-logged-in-like" aria-hidden="true" />
+                    <div id="dislike-count" aria-labelledby={`This post has ${dislikeCount} dislikes`} 
+                        className="vote-count-num">{dislikeCount} Dislikes</div>
+                </section>
+            </div>
+        </section>
     );
 }
 
