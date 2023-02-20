@@ -4,8 +4,8 @@ import { faThumbsUp, faThumbsDown, faPlus } from '@fortawesome/free-solid-svg-ic
 
 function AddCommentBar() {
     const loggedIn = true;
-    var likeCount = 2;
-    var dislikeCount = 0;
+    var likeCount = 2550;
+    var dislikeCount = 1000;
     var userLiked = false;
     var userDisliked = false;
 
@@ -19,19 +19,26 @@ function AddCommentBar() {
 
     return loggedIn ? (
         <section id="comment-add-section">
-            <section id="liking-section" className="vote-section">
-                <button className="voting-button" onClick={handleLikeClick}
-                    aria-labelledby={userLiked ? "remove your like on this post" :
-                    "Like this post"}>like <FontAwesomeIcon icon={faThumbsUp} className="green-text" /></button>
-                <div id="like-count" aria-labelledby={`This post has ${likeCount} likes`} 
-                    className="vote-count-num">{likeCount} likes</div>
-            </section>
-            
-            <button className="voting-button">dislike <FontAwesomeIcon icon={faThumbsDown} className="red-text" /></button>
+            <div className="d-flex-row j-content mg-top-1">
+                <section id="liking-section" className="vote-section">
+                    <button className="voting-button" onClick={handleLikeClick}
+                        aria-labelledby={userLiked ? "remove your like on this post" :
+                        "Like this post"}>like <FontAwesomeIcon icon={faThumbsUp} className="green-text" /></button>
+                    <div id="like-count" aria-labelledby={`This post has ${likeCount} likes`} 
+                        className="vote-count-num">{likeCount} Likes</div>
+                </section>
+                <section id="disliking-section" className="vote-section">
+                    <button className="voting-button" onClick={handleDislikeClick}
+                    aria-labelledby={userDisliked ? "remove your dislike on this post" :
+                    "Dislike this post"}>dislike <FontAwesomeIcon icon={faThumbsDown} className="red-text" /></button>
+                    <div id="dislike-count" aria-labelledby={`This post has ${dislikeCount} dislikes`} 
+                        className="vote-count-num">{dislikeCount} Dislikes</div>
+                </section>
+            </div>
             <form id="add-comment-form" className="d-flex-column flex-center-w">
                 <textarea name="comment" className="comment-entry-area flex-center-w" />
                 <button className="voting-button flex-center-w"><FontAwesomeIcon icon={faPlus} className="orange-text" /> Add Comment</button>
-                <p className="text-danger">Testing</p>
+                <p className="text-danger mg-bottom-1">Testing</p>
             </form>
         </section>
     ) : (

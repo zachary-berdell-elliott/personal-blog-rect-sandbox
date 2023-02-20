@@ -37,6 +37,10 @@
   }
 }
 
+#comment-add-section {
+  background-image: linear-gradient(rgb(255,255,255),rgb(10,10,10));
+}
+
 .comment-entry-area {
   margin-top: 2%;
   border-color: black;
@@ -57,8 +61,21 @@
 }
 
 .vote-section {
-  background-color: rgb(214, 254, 255);
+  background-image: linear-gradient(.33turn, #000c24 30%, rgb(214, 254, 255));
   border-radius: 10px;
+  margin-right: 2%;
+  padding: 2.5% 2.5% 3% 2.5%;
+  border-color: black;
+  border-width: 10px;
+}
+
+.vote-count-num {
+  color: white;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+  -webkit-text-stroke-width: 1px;
+  font-weight: 675;
+  margin-top: 10%;
+  font-size: 150%;
 }
 
 .red-text {
@@ -86,4 +103,20 @@
 .flex-center-w {
   margin-left: auto;
   margin-right: auto;
+}
+
+.j-content {
+  justify-content: center;
+}
+
+.pd-top-1 {
+  padding-top: 1%;
+}
+
+.mg-top-1 {
+  margin-top: 1%;
+}
+
+.mg-bottom-1 {
+  margin-bottom: 1%;
 }
