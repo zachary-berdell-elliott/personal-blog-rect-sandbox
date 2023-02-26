@@ -38,23 +38,26 @@ function AddCommentBar() {
             <form id="add-comment-form" className="d-flex-column flex-center-w">
                 <textarea name="comment" className="comment-entry-area flex-center-w" />
                 <button className="voting-button flex-center-w"><FontAwesomeIcon icon={faPlus} className="orange-text" /> Add Comment</button>
-                <p className="text-danger mg-bottom-1">Testing</p>
+                <p className="red-text mg-bottom-1">Testing</p>
             </form>
         </section>
     ) : (
-        <section id="comment-add-section">
+        <section id="comment-add-section" className="pb-2">
                         <div className="d-flex-row j-content mg-top-1">
-                <section id="liking-section" className="vote-section">
+                <section id="liking-section" className="vote-section mg-bottom-1">
                         <FontAwesomeIcon icon={faThumbsUp} className="green-text not-logged-in-like" aria-hidden="true"/>
                     <div id="like-count" aria-labelledby={`This post has ${likeCount} likes`} 
                         className="vote-count-num">{likeCount} Likes</div>
                 </section>
-                <section id="disliking-section" className="vote-section">
+                <section id="disliking-section" className="vote-section mg-bottom-1">
                     <FontAwesomeIcon icon={faThumbsDown} className="red-text not-logged-in-like" aria-hidden="true" />
                     <div id="dislike-count" aria-labelledby={`This post has ${dislikeCount} dislikes`} 
                         className="vote-count-num">{dislikeCount} Dislikes</div>
                 </section>
             </div>
+            <div className="important-link mg-top-1">
+                <a href="/login">Click here to log in if you want to add a comment or add a like or dislike.</a>
+            </div>  
         </section>
     );
 }

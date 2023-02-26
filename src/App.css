@@ -121,6 +121,50 @@
   margin-bottom: 1%;
 }
 
+.pb-1 {
+  padding-bottom: 1%;
+}
+
+.pb-2 {
+  padding-bottom: 2%;
+}
+
 .not-logged-in-like {
-  font-size: 200%
+  font-size: 200%;
+}
+
+.important-link {
+  background-image: radial-gradient(rgba(30, 8, 109, 0.5), rgb(14, 15, 30));
+  border-radius: 10px;
+  padding: .5% 1%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.important-link a {
+  color:rgb(7, 207, 243);
+  font-size: 200%;
+}
+
+.important-link:hover {
+  color:rgb(7, 207, 243);
+}
+
+@media screen and (max-width: 1144px) {
+  .comment-entry-area {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 932px) {
+  .important-link {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 622px) {
+  .important-link a {
+    font-size: 150%;
+  }
 }
