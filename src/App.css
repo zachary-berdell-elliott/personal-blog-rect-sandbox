@@ -37,6 +37,10 @@
   }
 }
 
+:root {
+
+}
+
 #comment-add-section {
   background-image: linear-gradient(rgb(255,255,255),rgb(10,10,10));
 }
@@ -167,4 +171,14 @@
   .important-link a {
     font-size: 150%;
   }
+}
+
+.blog-card {
+  background-image: radial-gradient(#000c24, #6f6f7c);
+  color: white;
+  padding: 5% 10%;
+}
+
+.display-post-image {
+  width: 10%;
 }
