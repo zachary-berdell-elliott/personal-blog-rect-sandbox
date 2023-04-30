@@ -125,6 +125,14 @@
   margin-bottom: 1%;
 }
 
+.mg-left-1 {
+  margin-left: 1%;
+}
+
+.mg-right-1 {
+  margin-right: 1%;
+}
+
 .pb-1 {
   padding-bottom: 1%;
 }
@@ -177,6 +185,7 @@
   background-image: radial-gradient(#000c24, #6f6f7c);
   color: white;
   padding: 5% 10%;
+  border-bottom: 50% solid white;
 }
 
 .display-post-image {

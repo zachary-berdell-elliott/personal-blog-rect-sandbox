@@ -29,8 +29,7 @@ function PostContainer() {
     return(
         <section>
             {postArray.map(postData => (
-                //<p key={postData.title}>{postData.title}</p>
-                <DisplayedPost postData={postData} key={postData.title} />
+                <DisplayedPost data={postData} key={postData.title} />
             ))}
         </section>
     );
