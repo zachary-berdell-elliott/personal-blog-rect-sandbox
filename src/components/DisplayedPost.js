@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbsUp, faThumbsDown } from '@fortawesome/free-solid-svg-icons';
+import { faThumbsUp, faThumbsDown, faBook } from '@fortawesome/free-solid-svg-icons';
 
 function DisplayedPost(props) {
 
@@ -20,13 +20,16 @@ function DisplayedPost(props) {
                     aria-hidden="true" alt=""/>
             )}
             <p>{parsedText}</p>
-            <div className="like-and-dislike">
-                <span aria-aria-labelledby="like count" className="mg-right-1">
-                    <FontAwesomeIcon icon={faThumbsUp} className="green-text" /> {postData.likeCount} 
+            <div className="like-and-dislike mg-bottom-2">
+                <span aria-labelledby="like count" className="mg-right-1">
+                    <FontAwesomeIcon icon={faThumbsUp} className="green-text" aria-hidden="true" /> {postData.likeCount} 
                 </span>
-                <span aria-aria-labelledby="dislike count">
-                    <FontAwesomeIcon icon={faThumbsDown} className="red-text" /> {postData.dislikeCount} 
+                <span aria-labelledby="dislike count">
+                    <FontAwesomeIcon icon={faThumbsDown} className="red-text" aria-hidden="true" /> {postData.dislikeCount} 
                 </span>
+            </div>
+            <div className="important-link">
+                <a href={'/posts/' + postData.postUrl}>Read Here  <FontAwesomeIcon icon={faBook} aria-hidden="true"/></a>
             </div>
         </article>
     );

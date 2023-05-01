@@ -11,20 +11,23 @@ function PostContainer() {
             title: "Coding in JS",
             likeCount: 200,
             dislikeCount: 50,
-            text: "Coding in JS is a good skill to know. This blog will teach you some of those basics. It is important to understand..."
+            text: "Coding in JS is a good skill to know. This blog will teach you some of those basics. It is important to understand...",
+            postUrl: "coding-in-js"
         },
         {
             title: "React",
             likeCount: 500,
             dislikeCount: 10,
-            text: "This is a test. Testing how this renders."
+            text: "This is a test. Testing how this renders.",
+            postUrl: "react"
         },
         {
             title: "React test",
             likeCount: 500,
             dislikeCount: 10,
-            text: "This is a test. Testing how this renders."
-        }
+            text: "This is a test. Testing how this renders.",
+            postUrl: "react-test"
+        } 
     ]
     return(
         <section>
