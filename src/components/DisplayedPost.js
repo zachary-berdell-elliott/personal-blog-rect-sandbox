@@ -29,7 +29,7 @@ function DisplayedPost(props) {
                 </span>
             </div>
             <div className="important-link">
-                <a href={'/posts/' + postData.postUrl}>Read Here  <FontAwesomeIcon icon={faBook} aria-hidden="true"/></a>
+                <a href={`/posts/${postData.postUrl}`}>Read Here  <FontAwesomeIcon icon={faBook} aria-hidden="true"/></a>
             </div>
         </article>
     );

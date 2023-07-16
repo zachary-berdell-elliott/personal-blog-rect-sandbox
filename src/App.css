@@ -195,3 +195,10 @@
 .display-post-image {
   width: 10%;
 }
+
+#post-edit-bar {
+  width: 33;
+  height: 10%;
+  background-color: #000c24;
+}
+
