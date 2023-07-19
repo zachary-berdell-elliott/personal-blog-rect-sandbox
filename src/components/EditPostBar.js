@@ -1,9 +1,10 @@
 import {React, useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileArrowUp, faMagnifyingGlass, faImage, faTableList,
-         faUndo, faRedo, faEye } from '@fortawesome/free-solid-svg-icons';
+         faUndo, faRedo, faEye, faFloppyDisk, faBookOpen, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 function EditPostBar() {
+    const alreadyPublished = false;
 
     return(
         <section id="post-edit-bar">
@@ -31,7 +32,19 @@ function EditPostBar() {
             <button className="post-edit-btn" id="preview-btn" aria-labelledby="Preview the Post Button"
             title="Preview the Post">
                 <FontAwesomeIcon icon={faEye} />
-            </button>  
+            </button>
+            {alreadyPublished ? (
+                <button className="post-edit-btn" id="save-btn" aria-labelledby="Save Changes Button"
+                title="Save Changes">
+                    <FontAwesomeIcon icon={faFloppyDisk} />
+                </button>) : (
+                <button className="post-edit-btn" id="publish-btn" aria-labelledby="Publish Post Button"
+                title="Publish Post">
+                    <FontAwesomeIcon icon={faBookOpen} />
+                    <FontAwesomeIcon icon={faArrowUp} />
+                </button>
+                )
+            }  
         </section>
     )
 }
