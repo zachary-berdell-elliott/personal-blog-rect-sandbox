@@ -3,14 +3,14 @@ import './App.css';
 import AddCommentBar from './components/AddCommentBar';
 import DisplayedPost from './components/DisplayedPost';
 import PostContainer from './components/PostContainer';
-import EditPostBar from './components/EditPostBar';
+import EditPost from './pages/EditPost';
 import Header from './components/Header'
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <EditPostBar />
+      <EditPost />
       {/*<PostContainer />
       */}
     </div>
