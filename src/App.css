@@ -129,6 +129,10 @@
   margin-left: 1%;
 }
 
+.mg-left-auto {
+  margin-left: auto;
+}
+
 .mg-right-1 {
   margin-right: 1%;
 }
@@ -204,4 +208,8 @@
 
 .reported-item {
   
+}
+
+.post-comment {
+  border-left: 5mm solid #000c24;
 }
