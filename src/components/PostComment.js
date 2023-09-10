@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faThumbsUp, faThumbsDown, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 function PostComment() {
     const comment = {
@@ -17,6 +19,17 @@ function PostComment() {
         createdAt: "2023-09-04 16:44:34.098"
     }
 
+    var userLiked = null;
+    var userDisliked = false
+
+    const handleLikeClick = () => {
+
+    }
+
+    const handleDislikeClick = () => {
+
+    }
+
     const loggedIn = true;
 
     return(
@@ -26,6 +39,28 @@ function PostComment() {
                 <p className="mg-left-auto mg-right-1">Date Posted: {comment.createdAt}</p>
             </div>
             <p>{comment.text}</p>
+            <div className="d-flex-row">
+                {loggedIn ? 
+                    (   
+                        <>
+                            <span className="mg-left-auto">
+                                <button className="voting-button" onClick={handleLikeClick}
+                                    aria-labelledby={userLiked ? "remove your like on this comment" :
+                                    "Like this comment"}>like <FontAwesomeIcon icon={faThumbsUp} className="green-text" /></button>
+                                <button className="voting-button" onClick={handleDislikeClick}
+                                    aria-labelledby={userDisliked ? "remove your dislike on this comment" :
+                                    "Dislike this comment"}>dislike <FontAwesomeIcon icon={faThumbsDown} className="red-text" /></button>
+                            </span>
+                            <button>Reply to Comment</button>
+                        </>
+                    ) : (
+                        <>
+                        </>
+                    )}
+                {comment.comments && comment.comments.length > 0 ?
+                    (<button>{`View ${comment.comments.length} replies`}</button>) :
+                    (<p>No replies</p>)}
+            </div>
         </article>
     )
 }

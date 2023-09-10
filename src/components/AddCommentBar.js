@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp, faThumbsDown, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 function AddCommentBar() {
-    const loggedIn = false;
+    const loggedIn = true;
     var likeCount = 2550;
     var dislikeCount = 1000;
     var userLiked = false;
