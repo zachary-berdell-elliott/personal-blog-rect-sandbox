@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faThumbsUp, faThumbsDown, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faThumbsUp, faThumbsDown, faPlus,
+    faEye, faFlag } from '@fortawesome/free-solid-svg-icons';
 
 function PostComment() {
     const comment = {
@@ -19,7 +20,7 @@ function PostComment() {
         createdAt: "2023-09-04 16:44:34.098"
     }
 
-    var userLiked = null;
+    var userLiked = true;
     var userDisliked = false
 
     const handleLikeClick = () => {
@@ -43,22 +44,33 @@ function PostComment() {
                 {loggedIn ? 
                     (   
                         <>
+                            <span>
+                                <button className="voting-button"> 
+                                <FontAwesomeIcon icon={faFlag} className="red-text" /> Report Comment
+                                </button>
+                            </span>
                             <span className="mg-left-auto">
                                 <button className="voting-button" onClick={handleLikeClick}
-                                    aria-labelledby={userLiked ? "remove your like on this comment" :
-                                    "Like this comment"}>like <FontAwesomeIcon icon={faThumbsUp} className="green-text" /></button>
+                                    aria-labelledby={userLiked ? `remove your like on this comment with ${comment.likeCount} likes` :
+                                    `Like this comment with ${comment.likeCount} likes`}>{userLiked ? 'remove ' : ''}
+                                    like {comment.likeCount} <FontAwesomeIcon icon={faThumbsUp} className="green-text" /></button>
                                 <button className="voting-button" onClick={handleDislikeClick}
-                                    aria-labelledby={userDisliked ? "remove your dislike on this comment" :
-                                    "Dislike this comment"}>dislike <FontAwesomeIcon icon={faThumbsDown} className="red-text" /></button>
+                                    aria-labelledby={userDisliked ? `remove your dislike on this comment with ${comment.dislikeCount} dislikes` :
+                                    `Dislike this comment with ${comment.dislikeCount} dislikes`}>{userDisliked ? 'remove ' : ''}
+                                    dislike {comment.dislikeCount} <FontAwesomeIcon icon={faThumbsDown} className="red-text" /></button>
                             </span>
-                            <button>Reply to Comment</button>
+                            <span>
+                                <button className="voting-button"><FontAwesomeIcon icon={faPlus} className="orange-text" /> Reply to Comment</button>
+                            </span>
                         </>
                     ) : (
                         <>
                         </>
                     )}
                 {comment.comments && comment.comments.length > 0 ?
-                    (<button>{`View ${comment.comments.length} replies`}</button>) :
+                    (<span><button className="voting-button">
+                        <FontAwesomeIcon icon={faEye} />{` View ${comment.comments.length} replies`}
+                    </button></span>) :
                     (<p>No replies</p>)}
             </div>
         </article>
