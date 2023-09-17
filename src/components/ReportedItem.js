@@ -1,4 +1,5 @@
 import React from 'react';
+import PostComment from './PostComment';
 
 function ReportedItem() {
     const reportedItem = {
@@ -35,6 +36,7 @@ function ReportedItem() {
                     <p>  username: {reportedItem.reportedBy.username}</p>
                 </div>
             </div>
+            {reportedItem.commentReported ? <PostComment /> : <></>}
             <div className="action-buttons d-flex-row">
                 <button className="voting-button">PermaBan User</button>
                 <button className="voting-button">Open Ban Form</button>

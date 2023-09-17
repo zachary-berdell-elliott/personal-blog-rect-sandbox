@@ -19,7 +19,7 @@ function Nav() {
     ];
     return(
         <nav>
-            <ul>
+            <ul className="d-flex-row">
                 <li>
                     <button>Categories <FontAwesomeIcon icon={faAngleDown} /></button>
                     <ul>

@@ -16,6 +16,7 @@ function App() {
       <PostContainer />
       <AddCommentBar />
       <PostComment />
+      <ReportedItem />
   </main>
       {/*<EditPost />*/}
       {/*<PostContainer />
