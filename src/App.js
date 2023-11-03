@@ -7,20 +7,22 @@ import EditPost from './pages/EditPost';
 import Header from './components/Header'
 import ReportedItem from './components/ReportedItem';
 import PostComment from './components/PostComment';
+import SignUpForm from './components/SignUpForm';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <main className="d-flex-column">
+      {/*<main className="d-flex-column">
       <PostContainer />
       <AddCommentBar />
       <PostComment />
       <ReportedItem />
-  </main>
+  </main>*/}
       {/*<EditPost />*/}
       {/*<PostContainer />
       */}
+      <SignUpForm />
     </div>
   );
 }

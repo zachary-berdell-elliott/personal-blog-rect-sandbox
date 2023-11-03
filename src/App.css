@@ -213,3 +213,10 @@
 .post-comment {
   border-left: 5mm solid #000c24;
 }
+
+.login-form {
+  border: .5mm solid;
+  border-radius: 7px;
+  padding: 3% 0%;
+  box-shadow: #000c24;
+}
