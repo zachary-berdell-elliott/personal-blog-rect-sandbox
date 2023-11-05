@@ -22,7 +22,9 @@ function App() {
       {/*<EditPost />*/}
       {/*<PostContainer />
       */}
-      <SignUpForm />
+      <main className="d-flex-row" style={{backgroundColor: 'black'}}>
+        <SignUpForm />
+      </main>
     </div>
   );
 }

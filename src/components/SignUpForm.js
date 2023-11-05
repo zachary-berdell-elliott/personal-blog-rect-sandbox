@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function SignUpForm() {
     return(
-        <form className="login-form flex-center-w">
+        <form className="login-form flex-center-w mg-top-1">
             <h2>Create an Account</h2>
             <div>
                 <label htmlFor="username">Username</label>
@@ -21,7 +21,7 @@ function SignUpForm() {
                 <label htmlFor="confirm-password">Confirm Password</label>
                 <input type="password" name="confirm-password" placeholder="Confirm your password" />
             </div>
-            <button type="submit" className="voting-button">Create Account</button>
+            <button type="submit" className="voting-button mg-top-4">Create Account</button>
         </form>
     );
 }
